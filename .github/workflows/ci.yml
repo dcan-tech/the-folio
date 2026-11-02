@@ -1,0 +1,17 @@
+# Runs on every pull request: lint first, then tests.
+name: CI
+
+on:
+  pull_request:          # trigger: any pull request
+
+jobs:
+  checks:                # this name is what branch protection will require
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4          # fetch the repository code
+      - uses: actions/setup-python@v5      # install Python
+        with:
+          python-version: "3.12"
+      - run: pip install pytest ruff       # test runner and linter
+      - run: ruff check .                  # lint: fails on style problems
+      - run: pytest                        # runs everything under tests/

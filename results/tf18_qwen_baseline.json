@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "prompt": "Write a four-line poem about an old computer.",
+  "settings": {
+    "do_sample": false,
+    "max_new_tokens": 80,
+    "dtype": "float32",
+    "prompt_format": "default chat template"
+  },
+  "output": "In the attic, where once it stood,\nA relic of days gone by,\nIts screens flicker with memories long ago,\nA testament to time's relentless march.",
+  "metrics": {
+    "generation_seconds": 2.5,
+    "new_tokens": 34,
+    "tokens_per_second": 13.6,
+    "peak_memory_mib": 3250
+  }
+}
